@@ -8,7 +8,7 @@ function actualizarContador() {
   const diferencia = fechaObjetivo - ahora;
 
   if (diferencia <= 0) {
-    contador.style.display = "none"; // desaparece
+    contador.style.display = "none"; // desaparece al llegar a 0
     return;
   }
 
@@ -18,6 +18,13 @@ function actualizarContador() {
   const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
   contador.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+  // Aplica el fade-in
+  contador.style.opacity = 0;            // empieza invisible
+  setTimeout(() => {
+    contador.style.opacity = 1;          // transiciona a visible
+  }, 10); // pequeño delay para activar la transición
 }
 
 setInterval(actualizarContador, 1000);
+actualizarContador(); // para mostrarlo inmediatamente al cargar
