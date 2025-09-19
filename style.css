@@ -1,23 +1,13 @@
-/* Reset básico */
 body {
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
+  height: 100vh;
+  background: url("fondo.jpg") no-repeat center top;
+  background-size: cover; /* PC: ocupa toda la pantalla */
 }
 
-/* Fondo fijo */
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("fondo.jpg") no-repeat center center;
-  background-size: cover; /* PC: llena toda la pantalla */
-  z-index: -1; /* para que el contador quede encima */
-}
-
-/* Overlay oscuro y centrado */
+/* Overlay centrado */
 .overlay {
   display: flex;
   justify-content: center;
@@ -27,22 +17,20 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Contador con fuente y tamaño escalable */
 h1 {
   color: white;
-  font-size: 10vw; /* el tamaño del contador depende del ancho de la pantalla */
+  font-size: 10vw; /* tamaño proporcional al ancho de la pantalla */
   text-align: center;
-  line-height: 1;
 }
 
-/* Ajustes para pantallas pequeñas (móviles) */
+/* Ajustes para móvil */
 @media (max-width: 768px) {
-  .background {
-    background-size: contain; /* móvil: se ve completa */
+  body {
+    background-size: contain; /* se ve completa en móvil */
     background-position: top center;
   }
 
   h1 {
-    font-size: 15vw; /* contador más grande en móviles pequeños */
+    font-size: 15vw; /* contador más grande en móvil */
   }
 }
