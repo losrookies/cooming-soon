@@ -1,23 +1,38 @@
-/* Imagen de fondo */
+/* Fondo general */
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url("fondo.png") no-repeat center center/cover;
+  background: url("fondo.jpg") no-repeat center center;
+  background-size: cover; /* PC: ocupa toda la pantalla */
   font-family: "Times New Roman", Times, serif;
 }
 
-/* Contenedor del contador */
+/* Overlay para oscurecer y centrar el contador */
 .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* oscurece un poco el fondo */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
+/* Contador */
 h1 {
   color: white;
   font-size: 70px;
   text-align: center;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Móvil: se ve completa */
+    background-position: center top; /* centra la imagen en la parte superior */
+  }
+
+  h1 {
+    font-size: 50px; /* ajusta tamaño del contador en móvil */
+  }
 }
