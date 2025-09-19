@@ -20,19 +20,14 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Contador con fade-in al cargar */
+/* Contador sin fade-in */
 h1 {
   color: white;
   font-size: 10vw;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* para visibilidad */
-}
-
-/* Animación fade-in */
-@keyframes fadeIn {
-  to { opacity: 1; }
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  opacity: 1; /* siempre visible */
+  animation: none; /* quitamos el fade */
 }
 
 /* Fondo y ajustes para móviles */
@@ -45,10 +40,8 @@ h1 {
   }
 
   h1 {
-    font-size: 12vw;       /* se ajusta para que quepa en pantalla */
-    line-height: 1.2;      /* evita que se corte */
-    text-align: center;
+    font-size: 12vw;
+    line-height: 1.2;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* para que se vea sobre cualquier fondo */
-  }
-}
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0
