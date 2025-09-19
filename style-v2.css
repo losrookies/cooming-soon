@@ -1,34 +1,23 @@
-/* Fondo general para PC */
+/* Imagen de fondo */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("fondo.png") no-repeat center center;
-  background-size: cover;
+  background: url("fondo.png") no-repeat center center/cover;
+  font-family: "Times New Roman", Times, serif;
 }
 
-/* Overlay centrado */
+/* Contenedor del contador */
 .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* oscurece un poco el fondo */
 }
 
-/* Contador escalable con fade-in al cargar */
 h1 {
   color: white;
-  font-size: 10vw;
+  font-size: 70px;
   text-align: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
-
-/* Ajustes para móviles */
-@media (max-width: 768px
