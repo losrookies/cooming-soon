@@ -1,0 +1,23 @@
+/* Imagen de fondo */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("fondo.png") no-repeat center center/cover;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Contenedor del contador */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* oscurece un poco el fondo */
+}
+
+h1 {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+}
