@@ -18,11 +18,13 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Contador escalable */
+/* Contador escalable con animación fade-in */
 h1 {
   color: white;
   font-size: 10vw;
   text-align: center;
+  opacity: 0; /* invisible al inicio */
+  transition: opacity 1s ease-in-out; /* transición suave */
 }
 
 /* Ajustes para móviles */
