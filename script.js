@@ -1,6 +1,5 @@
-// Fecha límite: 7 octubre 2025 a las 00:00
+// Fecha límite: 7 octubre 2025
 const fechaObjetivo = new Date("October 7, 2025 00:00:00").getTime();
-
 const contador = document.getElementById("contador");
 
 function actualizarContador() {
@@ -20,4 +19,5 @@ function actualizarContador() {
   contador.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
 }
 
+actualizarContador();
 setInterval(actualizarContador, 1000);
