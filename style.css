@@ -4,9 +4,7 @@ body {
   padding: 0;
   font-family: "Times New Roman", Times, serif;
   height: 100vh;
-  background-image: url("fondo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: url("fondo.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -30,10 +28,8 @@ h1 {
 /* Ajustes para móviles */
 @media (max-width: 768px) {
   body {
-    background-image: url("fondo-movil.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
+    background: url("fondo-movil.png") no-repeat top center !important;
+    background-size: contain !important;
   }
 
   h1 {
