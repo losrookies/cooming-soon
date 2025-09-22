@@ -10,7 +10,7 @@ body {
   background-size: cover;
 }
 
-/* Overlay centrado (se asegura que cubre todo) */
+/* Overlay centrado */
 .overlay {
   display: flex;
   justify-content: center;
@@ -25,9 +25,9 @@ h1 {
   color: white;
   font-size: 10vw;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* para visibilidad */
-  opacity: 1; /* siempre visible */
-  animation: none; /* sin fade */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  opacity: 1;
+  animation: none;
 }
 
 /* Fondo y ajustes para móviles */
@@ -40,16 +40,16 @@ h1 {
   }
 
   h1 {
-    font-size: 12vw;       /* se ajusta para que quepa en pantalla */
-    line-height: 1.2;      /* evita que se corte */
+    font-size: 12vw;
+    line-height: 1.2;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    opacity: 1;             /* siempre visible */
+    opacity: 1;
     animation: none;
   }
 
   .overlay {
-    min-height: 100vh; /* asegurar que overlay cubre toda la pantalla del móvil */
+    min-height: 100vh;
   }
 }
