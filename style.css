@@ -1,55 +1,33 @@
-/* Fondo PC */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
-  min-height: 100vh;
-  background-image: url("fondo-pc.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-/* Overlay centrado */
-.overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-/* Contador */
-h1 {
+  height: 100vh;
   color: white;
-  font-size: 10vw;
+  font-family: Arial, sans-serif;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  opacity: 1;
-  animation: none;
+  background: url('fondo-pc.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Fondo y ajustes para móviles */
+#countdown {
+  font-size: 4em; /* más grande */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  z-index: 10; /* por si hay superposición con fondo */
+}
+
+/* Fondo móvil */
 @media (max-width: 768px) {
   body {
-    background-image: url("fondo-movil3.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
+    background: url('fondo-movil3.png') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  h1 {
-    font-size: 12vw;
-    line-height: 1.2;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    opacity: 1;
-    animation: none;
-  }
-
-  .overlay {
-    min-height: 100vh;
+  #countdown {
+    font-size: 3em; /* tamaño proporcional en móvil */
   }
 }
