@@ -33,7 +33,7 @@ h1 {
 /* Fondo y ajustes para móviles */
 @media (max-width: 768px) {
   body {
-    background-image: url("fondo-movil2.png");
+    background-image: url("fondo-movil3.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
