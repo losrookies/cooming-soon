@@ -4,58 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOS RooKIES</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="icono2.ico">
-
-  <!-- Meta preview -->
-  <meta property="og:title" content="LOS RooKIES">
-  <meta property="og:description" content="los rookies coomin soon mai">
-  <meta property="og:image" content="preview.png">
-  <meta property="og:type" content="website">
-  <meta name="description" content="los rookies coomin soon mai">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icono2.ico" type="image/x-icon">
 
-  <!-- Manifest -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000000">
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="LOS RooKIES" />
+  <meta property="og:description" content="los rookies coomin soon mai" />
+  <meta property="og:image" content="https://losrookies.github.io/coomingsoon/preview.png" />
+  <meta property="og:url" content="https://losrookies.github.io/coomingsoon" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LOS RooKIES">
+  <meta name="twitter:description" content="los rookies coomin soon mai">
+  <meta name="twitter:image" content="https://losrookies.github.io/coomingsoon/preview.png">
 </head>
 <body>
-  <div id="countdown"></div>
-
-  <script>
-    // Cuenta atrás hasta el 7 de octubre a las 00:00
-    const targetDate = new Date("October 7, 2025 00:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        countdownEl.innerHTML = "¡Llegó el día!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    // Service Worker
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(() => console.log("Service Worker registrado"))
-        .catch(err => console.log("Error registrando Service Worker:", err));
-    }
-  </script>
+  <div class="overlay">
+    <h1 id="contador"></h1>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
