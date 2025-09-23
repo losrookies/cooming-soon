@@ -48,7 +48,7 @@ body::before {
 /* Fondo móvil */
 @media (max-width: 768px) {
   body {
-    background: url('fondo-movil3.png') no-repeat center center fixed;
+    background: url('fondo-movil4.png') no-repeat center center fixed;
     background-size: cover;
   }
 
