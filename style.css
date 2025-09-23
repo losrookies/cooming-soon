@@ -3,69 +3,27 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Times New Roman', Times, serif; /* Fuente general */
 }
 
-/* Body y fondos */
+/* Body y fondos con overlay oscuro */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: Arial, sans-serif;
   text-align: center;
   background: url('fondo-pc.png') no-repeat center center fixed;
   background-size: cover;
+  position: relative;
 }
 
-/* Contador */
-#contador {
-  font-size: 4em; /* tamaño grande */
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  z-index: 10;
-  text-shadow: 2px 2px 4px black; /* contorno negro */
-}
-
-/* Fondo móvil */
-@media (max-width: 768px) {
-  body {
-    background: url('fondo-movil3.png') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  #contador {
-    font-size: 3em; /* tamaño proporcional en móvil */
-  }
-
-  /* Texto debajo del contador */
-  #descubre-texto {
-    font-size: 1.3em;
-  }
-
-  #nilo-link {
-    font-size: 1.1em;
-  }
-}
-
-/* Texto debajo del contador */
-#descubre-texto {
-  margin-top: 20px;
-  font-size: 1.5em;
-  color: white;
-  text-shadow: 2px 2px 4px black; /* contorno negro */
-}
-
-/* Link clickeable */
-#nilo-link {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.3em;
-  color: #ffd700; /* dorado */
-  text-decoration: underline;
-  text-shadow: 2px 2px 4px black; /* contorno negro */
-}
-
-#nilo-link:hover {
-  color: #ff4500; /* rojo al pasar el mouse */
-}
+/* Overlay oscuro */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
