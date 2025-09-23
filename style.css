@@ -1,55 +1,71 @@
-/* Fondo PC */
-body {
+/* Reset y altura completa */
+html, body {
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
-  min-height: 100vh;
-  background-image: url("fondo-pc.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  height: 100%;
 }
 
-/* Overlay centrado */
-.overlay {
+/* Body y fondos */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('fondo-pc.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Contador */
-h1 {
-  color: white;
-  font-size: 10vw;
+#contador {
+  font-size: 4em; /* tamaño grande */
+  font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  opacity: 1;
-  animation: none;
+  color: white;
+  z-index: 10;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
 }
 
-/* Fondo y ajustes para móviles */
+/* Fondo móvil */
 @media (max-width: 768px) {
   body {
-    background-image: url("fondo-movil3.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
+    background: url('fondo-movil3.png') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  h1 {
-    font-size: 12vw;
-    line-height: 1.2;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    opacity: 1;
-    animation: none;
+  #contador {
+    font-size: 3em; /* tamaño proporcional en móvil */
   }
 
-  .overlay {
-    min-height: 100vh;
+  /* Texto debajo del contador */
+  #descubre-texto {
+    font-size: 1.3em;
   }
+
+  #nilo-link {
+    font-size: 1.1em;
+  }
+}
+
+/* Texto debajo del contador */
+#descubre-texto {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
+}
+
+/* Link clickeable */
+#nilo-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #ffd700; /* dorado */
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
+}
+
+#nilo-link:hover {
+  color: #ff4500; /* rojo al pasar el mouse */
 }
