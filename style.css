@@ -78,11 +78,11 @@ body::before {
   display: block;
   margin-top: 10px;
   font-size: 1.3em;
-  color: red; /* rojo */
+  color: red !important; /* rojo forzado */
   text-decoration: underline;
   text-shadow: 2px 2px 4px black; /* contorno negro */
 }
 
 #nilo-link:hover {
-  color: #ff4500; /* rojo más intenso al pasar el mouse */
+  color: #ff4500 !important; /* rojo más intenso al pasar el mouse */
 }
