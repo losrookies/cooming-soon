@@ -26,4 +26,63 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(
+  background: rgba(0, 0, 0, 0.5); /* oscuridad del fondo */
+  z-index: 1;
+}
+
+/* Contenedor de los textos encima del overlay */
+.overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Contador */
+#contador {
+  font-size: 4em; /* tamaño grande */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
+}
+
+/* Fondo móvil */
+@media (max-width: 768px) {
+  body {
+    background: url('fondo-movil3.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  #contador {
+    font-size: 3em; /* tamaño proporcional en móvil */
+  }
+
+  #descubre-texto {
+    font-size: 1.3em;
+  }
+
+  #nilo-link {
+    font-size: 1.1em;
+  }
+}
+
+/* Texto debajo del contador */
+#descubre-texto {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
+}
+
+/* Link clickeable */
+#nilo-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: red; /* rojo */
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px black; /* contorno negro */
+}
+
+#nilo-link:hover {
+  color: #ff4500; /* rojo más intenso al pasar el mouse */
+}
